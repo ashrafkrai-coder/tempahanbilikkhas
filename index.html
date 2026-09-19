@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="ms">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#111827">
+  <meta name="description" content="PWA tempahan bilik khas sekolah">
+  <link rel="manifest" href="/manifest.json">
+  <link rel="icon" href="/icons/icon-192.png">
+  <link rel="apple-touch-icon" href="/icons/icon-192.png">
+  <title>Tempahan Bilik Khas</title>
+  <link rel="stylesheet" href="/styles.css">
+  <script src="https://accounts.google.com/gsi/client" async defer></script>
+</head>
+<body>
+  <div class="app-shell">
+    <header class="topbar">
+      <div>
+        <p class="eyebrow">SMART BOOKING</p>
+        <h1>Tempahan Bilik Khas</h1>
+        <p id="todayText" class="muted"></p>
+      </div>
+      <button id="installBtn" class="ghost hidden">Pasang</button>
+    </header>
+
+    <main>
+      <section id="loginView" class="card login-card">
+        <div class="icon-badge">🏫</div>
+        <h2>Log masuk guru</h2>
+        <p class="muted">Gunakan akaun Google. Guru baharu akan diminta mendaftar sekali sahaja.</p>
+        <div id="googleBtn" class="google-btn-wrap"></div>
+        <p id="loginMsg" class="msg"></p>
+      </section>
+
+      <section id="registerView" class="card register-card hidden">
+        <div class="icon-badge">🪪</div>
+        <h2>Daftar Guru</h2>
+        <p class="muted">Pendaftaran kali pertama sahaja. Selepas ini, log masuk akan terus ke halaman tempahan.</p>
+
+        <form id="registerForm">
+          <label>Email Google
+            <input id="registerEmail" type="email" readonly>
+          </label>
+          <label>Nama penuh
+            <input id="registerName" type="text" placeholder="Nama penuh guru" autocomplete="name" required>
+          </label>
+          <button class="primary register-submit" type="submit">Daftar & Teruskan</button>
+          <button id="changeAccountBtn" class="ghost full-width" type="button">Guna akaun Google lain</button>
+          <p id="registerMsg" class="msg"></p>
+        </form>
+      </section>
+
+      <section id="appView" class="hidden">
+        <div class="profile-row card">
+          <div>
+            <p class="muted small">Log masuk sebagai</p>
+            <strong id="teacherName">-</strong>
+            <p id="teacherEmail" class="muted small"></p>
+          </div>
+          <button id="logoutBtn" class="ghost danger">Keluar</button>
+        </div>
+
+        <section class="section-head">
+          <div>
+            <p class="eyebrow">BILIK KHAS</p>
+            <h2>Pilih bilik</h2>
+          </div>
+          <input id="datePicker" type="date" aria-label="Tarikh">
+        </section>
+
+        <div id="roomList" class="room-list"></div>
+
+        <section class="section-head">
+          <div>
+            <p class="eyebrow">TEMPAHAN SAYA</p>
+            <h2>Akan datang</h2>
+          </div>
+          <button id="refreshBtn" class="ghost">Segar semula</button>
+        </section>
+        <div id="myBookings" class="booking-list"></div>
+      </section>
+    </main>
+  </div>
+
+  <div id="bookingModal" class="modal hidden" role="dialog" aria-modal="true">
+    <div class="modal-card">
+      <div class="modal-head">
+        <div>
+          <p class="eyebrow">TEMPAHAN BARU</p>
+          <h2 id="modalRoomName">Bilik</h2>
+        </div>
+        <button id="closeModal" class="icon-btn">✕</button>
+      </div>
+
+      <form id="bookingForm">
+        <input type="hidden" id="roomId">
+        <label>Tarikh
+          <input id="bookingDate" type="date" required>
+        </label>
+        <div class="two-col">
+          <label>Masa mula
+            <input id="startTime" type="time" required>
+          </label>
+          <label>Masa tamat
+            <input id="endTime" type="time" required>
+          </label>
+        </div>
+        <label>Kelas / Kumpulan
+          <input id="className" type="text" placeholder="Contoh: 2 Al-Farabi">
+        </label>
+        <label>Tujuan
+          <textarea id="purpose" rows="3" placeholder="Contoh: Aktiviti PdP" required></textarea>
+        </label>
+
+        <div id="slotInfo" class="slot-info"></div>
+        <button class="primary" type="submit">Sahkan Tempahan</button>
+        <p id="bookingMsg" class="msg"></p>
+      </form>
+    </div>
+  </div>
+
+  <script src="/config.js"></script>
+  <script src="/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+:root{
+  --bg:#f5f4f0;--card:#ffffff;--ink:#171717;--muted:#737373;--line:#e8e5df;
+  --accent:#1f2937;--ok:#166534;--okbg:#ecfdf3;--busy:#991b1b;--busybg:#fef2f2;
+}
+*{box-sizing:border-box} body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:var(--bg);color:var(--ink)}
+button,input,textarea{font:inherit}.app-shell{max-width:680px;margin:auto;min-height:100vh;padding:18px 16px 90px}
+.topbar{display:flex;align-items:flex-start;justify-content:space-between;gap:12px;margin-bottom:16px}.topbar h1{margin:2px 0 4px;font-size:24px;letter-spacing:-.03em}
+.eyebrow{margin:0;font-size:10px;letter-spacing:.14em;font-weight:800;color:#78716c}.muted{color:var(--muted);margin:0}.small{font-size:12px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:16px;box-shadow:0 8px 24px rgba(0,0,0,.03)}
+.login-card{text-align:center;padding:28px 18px}.login-card h2{margin:10px 0 8px}.icon-badge{width:58px;height:58px;border-radius:18px;display:grid;place-items:center;margin:auto;background:#f0eee9;font-size:28px}
+.google-btn-wrap{display:flex;justify-content:center;margin-top:20px}.profile-row{display:flex;align-items:center;justify-content:space-between}
+.section-head{display:flex;align-items:end;justify-content:space-between;gap:10px;margin:22px 2px 10px}.section-head h2{margin:2px 0 0;font-size:20px}
+.section-head input[type="date"]{width:auto;max-width:158px}.room-list,.booking-list{display:grid;gap:10px}
+.room-card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:14px;display:flex;align-items:center;justify-content:space-between;gap:12px}
+.room-main{min-width:0}.room-name{font-weight:800;font-size:16px;margin-bottom:4px}.room-meta{font-size:12px;color:var(--muted)}
+.status{display:inline-flex;align-items:center;gap:6px;font-size:11px;font-weight:800;border-radius:999px;padding:5px 8px;margin-top:8px}.status.free{color:var(--ok);background:var(--okbg)}.status.busy{color:var(--busy);background:var(--busybg)}
+.primary,.ghost,.book-btn,.cancel-btn,.icon-btn{border:0;border-radius:12px;cursor:pointer}.primary{width:100%;padding:13px 14px;background:var(--accent);color:#fff;font-weight:800}.ghost{background:#ebe8e2;padding:9px 11px;font-weight:700}.danger{color:#991b1b}.book-btn{padding:10px 12px;background:#111827;color:#fff;font-weight:800;white-space:nowrap}
+input,textarea{width:100%;border:1px solid #ddd8d0;border-radius:12px;padding:11px 12px;background:#fff;outline:none}input:focus,textarea:focus{border-color:#9ca3af}
+label{display:block;font-size:12px;font-weight:800;margin:12px 0 0}.two-col{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.booking-item{background:#fff;border:1px solid var(--line);border-radius:16px;padding:13px}.booking-top{display:flex;justify-content:space-between;gap:12px}.booking-title{font-weight:800}.booking-detail{font-size:12px;color:var(--muted);margin-top:4px}.cancel-btn{margin-top:10px;padding:8px 10px;background:#fef2f2;color:#991b1b;font-weight:800}
+.modal{position:fixed;inset:0;background:rgba(17,24,39,.46);display:flex;align-items:flex-end;justify-content:center;padding:12px;z-index:50}.modal-card{width:min(680px,100%);background:#faf9f6;border-radius:24px 24px 16px 16px;padding:18px;max-height:94vh;overflow:auto}.modal-head{display:flex;justify-content:space-between;gap:12px}.modal-head h2{margin:2px 0}.icon-btn{width:38px;height:38px;background:#ebe8e2}.slot-info{margin:12px 0;font-size:12px;color:var(--muted)}
+.msg{font-size:12px;margin-top:10px}.msg.error{color:#b91c1c}.msg.ok{color:#166534}.empty{padding:18px;text-align:center;color:var(--muted);border:1px dashed #d6d3d1;border-radius:16px}
+.hidden{display:none!important}
+@media(min-width:700px){.app-shell{padding-top:28px}.modal{align-items:center}.modal-card{border-radius:24px}}
+.register-card{padding:24px 18px}.register-card h2{text-align:center;margin:10px 0 8px}.register-card>.muted{text-align:center}.register-submit{margin-top:18px}.full-width{width:100%;margin-top:9px}input[readonly]{background:#f3f1ec;color:#6b7280}
