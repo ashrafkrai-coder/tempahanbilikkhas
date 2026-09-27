@@ -1,10 +1,8 @@
-Tempahan Bilik Khas V1.4 — OAUTH + APPS SCRIPT READY
+Tempahan Bilik Khas V2.0 — SUPABASE
 
 Production: https://tempahanbilikkhas.vercel.app
 Google Client ID: 417566039468-7sjjsdm1pvv280uas469fdultcr29mqd.apps.googleusercontent.com
-Apps Script: https://script.google.com/macros/s/AKfycbyIXT5V0NLq5Ak0BFnN1FolB0zzMMH1CAsLVQqNmPZ8Arto53lIywiEv-0E1httMTUyOA/exec
-Spreadsheet ID: 1D-xG8ddkFNYWsqgASJvJyHiqAR3yN4XDgGSPpkoUw48
+Supabase project: driutbpqenpqqqqfxptr (https://driutbpqenpqqqqfxptr.supabase.co)
 
-api/booking.js akan menggunakan APPS_SCRIPT_URL jika env Vercel diset; jika belum, ia menggunakan URL Apps Script di atas sebagai fallback.
-
-Selepas redeploy, uji: Login Google -> Daftar Guru -> Tempah Bilik.
+Vercel env: SUPABASE_URL, SUPABASE_SERVICE_ROLE_KEY (Production, Preview).
+Uji selepas deploy: Login Google -> Daftar Guru -> Tempah Bilik.
