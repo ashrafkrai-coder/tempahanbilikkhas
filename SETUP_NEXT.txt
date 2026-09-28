@@ -1,8 +1,7 @@
 Tempahan Bilik Khas V2.0 — SUPABASE
 
 Production: https://tempahanbilikkhas.vercel.app
-Google Client ID: 417566039468-7sjjsdm1pvv280uas469fdultcr29mqd.apps.googleusercontent.com
 Supabase project: driutbpqenpqqqqfxptr (https://driutbpqenpqqqqfxptr.supabase.co)
 
 Vercel env: SUPABASE_URL, SUPABASE_SERVICE_ROLE_KEY (Production, Preview).
-Uji selepas deploy: Login Google -> Daftar Guru -> Tempah Bilik.
+Uji selepas deploy: Daftar (email + PIN) -> Log masuk -> Tempah Bilik.

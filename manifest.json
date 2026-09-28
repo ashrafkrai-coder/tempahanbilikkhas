@@ -1,10 +1,10 @@
 {
-  "name": "Tempahan Bilik Khas",
-  "short_name": "Bilik Khas",
+  "name": "Smart Booking — Tempahan Bilik Khas",
+  "short_name": "Smart Booking",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#f5f4f0",
-  "theme_color": "#111827",
+  "background_color": "#f4f5fa",
+  "theme_color": "#4338ca",
   "icons": [
     {
       "src": "/icons/icon-192.png",
